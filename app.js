@@ -9,7 +9,15 @@
 // }
 // const theHobbit = new Library("theHobbit", "J.R.R. Tolkien", "295", "readed");
 // theHobbit.info();
+
 const booksContainer = document.querySelector(".container");
+const buttonForm = document.querySelector(".accept__form");
+const titleForm = document.querySelector("#title");
+const authorForm = document.querySelector("#author");
+const pagesForm = document.querySelector("#pages");
+const readFormYes = document.querySelector("#r1");
+const readFormNo = document.querySelector("#r2");
+
 let myLibrary = [
   "The Lord of the Rings",
   "The Hobbit",
@@ -29,4 +37,12 @@ function addBookToLibrary() {
     holder.innerHTML += `${myLibrary[i]}`;
   }
 }
+const checkForm = () => {
+  if (titleForm.value !== "") {
+    console.log("hej");
+  } else {
+    console.log("nara");
+  }
+};
+buttonForm.addEventListener("click", checkForm);
 addBookToLibrary();

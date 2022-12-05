@@ -34,6 +34,32 @@
         <div class="page">The Lord of The Ring</div>
         <div class="page">The Lord of The Ring</div>
       </section>
+
+      <div class="container__form">
+        <h2>Add book to your library</h2>
+
+        <p>
+          <label for="title">Title</label>
+          <textarea
+            required
+            type="text"
+            id="title"
+            maxlength="30"
+            minlength="1"
+          ></textarea>
+        </p>
+        <p>
+          <label for="author">Author</label>
+          <textarea type="text" id="author" required></textarea>
+        </p>
+        <p>
+          <label for="pages">Pages</label>
+          <textarea type="number" id="pages" required></textarea>
+        </p>
+        <p>
+          <button class="accept__form">ADD</button>
+        </p>
+      </div>
     </main>
     <script src="app.js"></script>
   </body>

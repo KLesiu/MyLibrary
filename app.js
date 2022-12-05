@@ -11,10 +11,12 @@
 // theHobbit.info();
 const booksContainer = document.querySelector(".container");
 let myLibrary = [
-  "The Lord of the Ring",
+  "The Lord of the Rings",
   "The Hobbit",
   "Star Wars",
   "Harry Potter",
+  "Green book",
+  "The Da Vinci Code",
 ];
 
 function Book() {}
@@ -24,7 +26,7 @@ function addBookToLibrary() {
     holder = document.createElement("div");
     holder.classList.add("holder");
     booksContainer.appendChild(holder);
-    holder.innerHTML += `I read ${myLibrary[i]} `;
+    holder.innerHTML += `${myLibrary[i]}`;
   }
 }
 addBookToLibrary();

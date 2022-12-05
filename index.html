@@ -6,11 +6,34 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>My Library</title>
     <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kenia&family=Open+Sans:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
-    <header><h1>My Local Library</h1></header>
+    <header>
+      <h1>My Local Library</h1>
+      <nav>
+        <div class="shelf"></div>
+        <section class="container"></section>
+        <div class="shelf"></div>
+        <div class="floor">1</div>
+      </nav>
+    </header>
     <main>
-      <section class="container"></section>
+      <section class="book hidden">
+        <div class="page">The Lord of The Ring</div>
+        <div class="page">The Lord of The Ring</div>
+      </section>
     </main>
     <script src="app.js"></script>
   </body>

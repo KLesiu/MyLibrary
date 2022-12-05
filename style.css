@@ -1,21 +1,96 @@
+:root {
+  --colorShelf-: rgba(87, 38, 9, 0.808);
+}
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  font-family: "Open Sans", sans-serif;
+}
+body {
+  background-image: url(/img/background.jpg);
+  background-size: cover;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-wrap: wrap;
 }
 header {
   width: 100vw;
-  height: 30vh;
+  height: 20vh;
+  padding: 10px;
+}
+header h1 {
+  font-family: "Kenia", cursive;
+  font-size: 50px;
+  color: white;
+  text-shadow: 5px 5px 5px black;
+}
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.shelf {
+  background-color: var(--colorShelf-);
+  width: 3vw;
+  border-radius: 5px;
 }
 .container {
   display: flex;
-  width: 100vw;
-  height: 70vh;
-  justify-content: space-around;
+  width: 85vw;
+  height: 20vh;
+  justify-content: flex-start;
+  align-items: flex-end;
+  gap: 10px;
+}
+.floor {
+  background-color: var(--colorShelf-);
+  width: 91vw;
 }
 .holder {
-  background-color: blue;
-  width: 100px;
-  height: 100px;
+  background-color: rgb(141, 96, 13);
+  border: black solid 5px;
+  width: 5vw;
+  height: 90%;
   color: white;
+  font-size: 13px;
+  text-align: center;
+  font-weight: 700;
+  padding: 10px;
+  cursor: pointer;
+}
+.holder:hover {
+  height: 100%;
+}
+main {
+  display: flex;
+  justify-content: center;
+  height: 80vh;
+  width: 100vw;
+  align-items: center;
+}
+.book {
+  width: 80vw;
+  height: 50vh;
+  background-image: url(/img/openedbook.png);
+  display: flex;
+  margin-top: 100px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-left: auto;
+  margin-right: auto;
+  align-items: flex-end;
+}
+.page {
+  width: 45%;
+  height: 100%;
+  padding: 7%;
+  margin-left: auto;
+  margin-right: auto;
+  font-family: "Dancing Script", cursive;
+  font-size: 30px;
+}
+.hidden {
+  display: none;
 }

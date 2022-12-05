@@ -38,7 +38,11 @@ function addBookToLibrary() {
   }
 }
 const checkForm = () => {
-  if (titleForm.value !== "") {
+  if (
+    titleForm.value !== "" &&
+    authorForm.value !== "" &&
+    pagesForm.value !== ""
+  ) {
     console.log("hej");
   } else {
     console.log("nara");

@@ -20,19 +20,17 @@ const readFormNo = document.querySelector("#r2");
 const openForm = document.querySelector(".open__form");
 const containerForm = document.querySelector(".container__form");
 const closeForm = document.querySelector(".close__form");
-const divHolder = document.querySelectorAll(".holder");
 
 let myLibrary = [];
 let myLibraryObj = [];
 
 function addBookToLibrary() {
   let holder;
-
+  holder = document.createElement("div");
+  holder.classList.add("holder");
+  booksContainer.appendChild(holder);
   for (i = 0; i < myLibrary.length; i++) {
-    holder = document.createElement("div");
-    holder.classList.add("holder");
-    booksContainer.appendChild(holder);
-    holder.innerHTML += `${myLibrary[i]}`;
+    holder.innerHTML = `${myLibrary[i]}`;
   }
 }
 
@@ -51,15 +49,19 @@ const checkForm = () => {
       pages: pagesForm.value,
     });
     addBookToLibrary();
+    // showBook();
   } else {
-    console.log("nara");
+    alert("You must complete all sections to add a book");
   }
 };
-const showBook = () => {
-  for (i = 0; i < divHolder.length; i++) {
-    this.divHolder;
-  }
-};
+// const showBook = () => {
+//   const divHolder = document.querySelectorAll(".holder");
+//   for (i = 0; i < divHolder.length; i++) {
+//     divHolder[i].addEventListener("click", () => {
+//       console.log(i);
+//     });
+//   }
+// };
 
 // AddEventListeners
 openForm.addEventListener("click", () => {

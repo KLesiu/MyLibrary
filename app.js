@@ -49,19 +49,11 @@ const checkForm = () => {
       pages: pagesForm.value,
     });
     addBookToLibrary();
-    // showBook();
+    showBook();
   } else {
     alert("You must complete all sections to add a book");
   }
 };
-// const showBook = () => {
-//   const divHolder = document.querySelectorAll(".holder");
-//   for (i = 0; i < divHolder.length; i++) {
-//     divHolder[i].addEventListener("click", () => {
-//       console.log(i);
-//     });
-//   }
-// };
 
 // AddEventListeners
 openForm.addEventListener("click", () => {
@@ -74,3 +66,13 @@ closeForm.addEventListener("click", () => {
   containerForm.classList.add("hidden");
 });
 buttonForm.addEventListener("click", checkForm);
+
+// Functions start
+const showBook = () => {
+  const divHolder = document.querySelectorAll(".holder");
+  for (i = 0; i < divHolder.length; i++) {
+    divHolder[i].addEventListener("click", function () {
+      this.classList.add("active");
+    });
+  }
+};

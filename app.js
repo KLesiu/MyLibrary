@@ -20,6 +20,8 @@ const readFormNo = document.querySelector("#r2");
 const openForm = document.querySelector(".open__form");
 const containerForm = document.querySelector(".container__form");
 const closeForm = document.querySelector(".close__form");
+const buttonBook = document.querySelector(".close__book");
+const book = document.querySelector(".book");
 
 let myLibrary = [];
 let myLibraryObj = [];
@@ -66,13 +68,31 @@ closeForm.addEventListener("click", () => {
   containerForm.classList.add("hidden");
 });
 buttonForm.addEventListener("click", checkForm);
+buttonBook.addEventListener("click", () => {
+  book.classList.add("hidden");
+});
 
 // Functions start
 const showBook = () => {
   const divHolder = document.querySelectorAll(".holder");
   for (i = 0; i < divHolder.length; i++) {
-    divHolder[i].addEventListener("click", function () {
+    divHolder[i].addEventListener("click", function (e) {
       this.classList.add("active");
+      console.log(e.target);
+      // e.target = myLibraryObj[i - 1].title;
+      const bookTitle = document.querySelector(".page");
+      const bookAuthor = document.querySelector(".author__p");
+      const bookPages = document.querySelector(".page__p");
+      if (e.target == divHolder[0]) {
+        bookTitle.innerText = myLibraryObj[0].title;
+        bookAuthor.innerText = myLibraryObj[0].author;
+        bookPages.innerText = myLibraryObj[0].pages;
+      } else if (e.target == divHolder[1]) {
+        bookTitle.innerText = myLibraryObj[1].title;
+        bookAuthor.innerText = myLibraryObj[1].author;
+        bookPages.innerText = myLibraryObj[1].pages;
+      }
+      book.classList.remove("hidden");
     });
   }
 };

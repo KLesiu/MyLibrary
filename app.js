@@ -1,15 +1,3 @@
-// function Library(tittle, author, pages, readed) {
-//   this.tittle = tittle;
-//   this.author = author;
-//   this.pages = pages;
-//   this.readed = readed;
-//   this.info = function () {
-//     console.log(`${tittle} by ${author},${pages}pages,${readed}`);
-//   };
-// }
-// const theHobbit = new Library("theHobbit", "J.R.R. Tolkien", "295", "readed");
-// theHobbit.info();
-
 const booksContainer = document.querySelector(".container");
 const buttonForm = document.querySelector(".accept__form");
 const titleForm = document.querySelector("#title");
@@ -83,16 +71,15 @@ const showBook = () => {
       const bookTitle = document.querySelector(".page");
       const bookAuthor = document.querySelector(".author__p");
       const bookPages = document.querySelector(".page__p");
-      if (e.target == divHolder[0]) {
-        bookTitle.innerText = myLibraryObj[0].title;
-        bookAuthor.innerText = myLibraryObj[0].author;
-        bookPages.innerText = myLibraryObj[0].pages;
-      } else if (e.target == divHolder[1]) {
-        bookTitle.innerText = myLibraryObj[1].title;
-        bookAuthor.innerText = myLibraryObj[1].author;
-        bookPages.innerText = myLibraryObj[1].pages;
+
+      for (i = 0; i < divHolder.length; i++) {
+        if (e.target == divHolder[i]) {
+          bookTitle.innerText = myLibraryObj[i].title;
+          bookAuthor.innerText = myLibraryObj[i].author;
+          bookPages.innerText = myLibraryObj[i].pages;
+          book.classList.remove("hidden");
+        }
       }
-      book.classList.remove("hidden");
     });
   }
 };

@@ -73,7 +73,7 @@ main {
 .book {
   width: 80vw;
   height: 50vh;
-  background-image: url(/img/openedbook.png);
+  background-image: url(img/openedbook.png);
   display: flex;
   margin-top: 100px;
   background-repeat: no-repeat;

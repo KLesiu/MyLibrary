@@ -1,4 +1,5 @@
 # MyLibrary
+This project is part of JS Odin-Course
 ## Work-time
 6 days
 ## New skills:
